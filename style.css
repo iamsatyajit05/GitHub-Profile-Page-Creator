@@ -1,0 +1,113 @@
+/* left and right for continer in content box */
+body{
+    scroll-behavior: smooth;
+}
+
+.right div {
+    width: 235px;
+}
+
+.genretedCode,
+.codeSecondBox {
+    width: 500px;
+}
+
+.editor {
+    width: 500px;
+}
+
+.socialBoxes input {
+    width: 225px;
+}
+
+.priviewBox {
+    width: 575px;
+    border: 1px rgba(0, 0, 0, 0.5) solid;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* .skillsImg img {
+    margin: 2px 0;
+} */
+
+i:hover {
+    font-weight: 600;
+}
+
+input, label img {
+    cursor: pointer;
+}
+
+label img:hover {
+    box-shadow: 0px 0px 20px gray;
+}
+
+@media only screen and (max-width: 1000px) {
+    .mainBox,
+    .codeBox {
+        flex-direction: column;
+    }
+
+    .editor,
+    .priviewBox,
+    .codeBox,
+    .genretedCode {
+        width: 100%;
+    }
+
+    .codeSecondBox {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .form1>div {
+        flex-direction: column;
+    }
+
+    .form2 {
+        flex-direction: column;
+    }
+
+    .right div {
+        width: 235px;
+    }
+
+    .socialBoxes div{
+        flex-direction: column;
+    }
+
+    .socialBoxes div input:first-child{
+        margin-bottom: 1rem;
+    }
+
+    .left,
+    .right,
+    .genretedCode,
+    .codeSecondBox {
+        width: auto;
+    }
+
+    .socialBoxes input {
+        width: 100%;
+    }
+
+    .priviewBox {
+        margin-top: 24px;
+        width: auto;
+    }
+
+    #trophies, #mostUsedLang, #statistics, #activityGraph, #matrcis, #streakStatus, #profileView {
+        width: 100%;
+    }
+}
+
+#spinnerHead {
+    height: 100vh;
+}

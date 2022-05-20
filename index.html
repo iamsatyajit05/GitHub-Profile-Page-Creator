@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <title>Github Profile Page Creator</title>
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="d-grid" id="spinnerHead">
+            <div class="spinner-border m-auto" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <div id="mainBody">
+        <div class="my-3">
+            <h1 class="container">GitHub Profile Page Creator</h1>
+        </div>
+        <hr>
+        <div class="mainBox container d-flex justify-content-center">
+            <div class="editor mx-3">
+                <nav class="mb-4">
+                    <div class="nav nav-pills justify-content-between" id="pills-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="pill" data-bs-target="#header"
+                            type="button" role="tab" aria-controls="nav-home" aria-selected="true">Header</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="pill" data-bs-target="#skills"
+                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Langueages &
+                            Tools</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="pill" data-bs-target="#social"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Socials</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="pill" data-bs-target="#github"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Github
+                            Specials</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tab Content">
+                    <div id="header" class="tab-pane fade show active">
+                        <h3>Heading</h3>
+                        <input name="" id="idName" class="form-control mb-3" placeholder="Your name"></input>
+                        <h3>Banner <a href="https://leviarista.github.io/github-profile-header-generator/" target="_blank"><img src="queMark.webp" alt="que mark" height="20px"></a> </h3>
+                        <input name="" id="idImg" class="form-control mb-3" placeholder="Banner Link"></input>
+                        <h3>About Me</h3>
+                        <textarea name="" id="idAbout" rows="2" class="form-control mb-3"
+                            placeholder="Write about yourself"></textarea>
+                        <h3>Work</h3>
+                        <form class="mb-3 form1">
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">I'm currently working on </label>
+                                    <input id="idList1" type="text" class="form-control"
+                                        placeholder="Project Name">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">I want to collaborate on </label>
+                                    <input id="idList2" type="text" class="form-control" placeholder="Project Name">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">I'm looking for help with </label>
+                                    <input id="idList3" type="text" class="form-control" placeholder="Project Name">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">I'm currently learning </label>
+                                    <input id="idList4" type="text" class="form-control" placeholder="web3, react, pyhton">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Ask me about </label>
+                                    <input id="idList5" type="text" class="form-control"
+                                        placeholder="Front-End Development">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">How to reach me</label>
+                                    <input id="idList6" type="text" class="form-control"
+                                        placeholder="example@gmail.com">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">All of my projects are available
+                                        at </label>
+                                    <div class="d-flex justify-content-between">
+                                        <input id="idList7" type="text" class="form-control"
+                                            placeholder="Portfolio Name">
+                                        <input id="idList71" type="text" class="form-control"
+                                            placeholder="Portfolio Link">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">I regularly write articles on
+                                        at </label>
+                                    <div class="d-flex justify-content-between">
+                                        <input id="idList8" type="text" class="form-control" placeholder="Blog Name">
+                                        <input id="idList81" type="text" class="form-control" placeholder="Blog Link">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Know about my experiences </label>
+                                    <div>
+                                        <input id="idList9" type="text" class="form-control" placeholder="Resume Link">
+                                    </div>
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Fun Fact </label>
+                                    <input id="idList10" type="text" class="form-control" placeholder="I love memes">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="skills" class="tab-pane fade">
+                        <h3 class="mb-3">Programming Langueages</h3>
+                        <div class="mb-4">
+                                    <input hidden id="idJava" class="form-check-input" type="checkbox"> 
+                                    <label for="idJava"><img
+                                        class="mb-1" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idC" class="form-check-input" type="checkbox"> 
+                                    <label for="idC"><img class="mb-1"
+                                        src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idCpp" class="form-check-input" type="checkbox"> 
+                                    <label for="idCpp"><img class="mb-1"
+                                        src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idCsharp" class="form-check-input" type="checkbox"> 
+                                    <label for="idCsharp"><img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idPython" class="form-check-input" type="checkbox"> 
+                                    <label for="idPython"><img
+                                        class="mb-1" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idJs" class="form-check-input" type="checkbox"> 
+                                    <label for="idJs"><img class="mb-1"
+                                        src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idTs" class="form-check-input" type="checkbox"> 
+                                    <label for="idTs"><img class="mb-1"
+                                        src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idSwift" class="form-check-input" type="checkbox">
+                                    <label for="idSwift"> <img
+                                        class="mb-1" src="https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idGo" class="form-check-input" type="checkbox"> 
+                                    <label for="idGo"><img class="mb-1"
+                                        src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idPhp" class="form-check-input" type="checkbox"> 
+                                    <label for="idPhp"><img class="mb-1"
+                                        src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" height="30px" alt=""></label>
+                        </div>
+                        <h3 class="mb-3">Mobile App Development</h3>
+                        <div class="mb-4">
+                                    <input hidden id="idAndroid" class="form-check-input" type="checkbox"> 
+                                    <label for="idAndroid"><img
+                                        class="mb-1" src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idFlutter" class="form-check-input" type="checkbox">
+                                    <label for="idFlutter"> <img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idKotlin" class="form-check-input" type="checkbox">
+                                    <label for="idKotlin"> <img
+                                        class="mb-1" 
+                                        src="https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idReactnative" class="form-check-input" type="checkbox">
+                                    <label for="idReactnative"> <img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idDart" class="form-check-input" type="checkbox"> 
+                                    <label for="idDart"><img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white"
+                                        height="30px" alt=""></label>
+                        </div>
+                        <h3 class="mb-3">Frontend Development</h3>
+                        <div class="mb-4">
+                                    <input hidden id="idHtml" class="form-check-input" type="checkbox"> 
+                                    <label for="idHtml"><img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idCss" class="form-check-input" type="checkbox"> 
+                                    <label for="idCss"><img 
+                                    class="mb-1"
+                                        src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idBootstrap" class="form-check-input" type="checkbox"> 
+                                    <label for="idBootstrap"><img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idReact" class="form-check-input" type="checkbox"> 
+                                    <label for="idReact"><img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idTailwind" class="form-check-input" type="checkbox"> 
+                                    <label for="idTailwind"><img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idVuejs" class="form-check-input" type="checkbox"> 
+                                    <label for="idVuejs"><img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idAngular" class="form-check-input" type="checkbox">
+                                    <label for="idAngular"> <img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idMaterialui" class="form-check-input" type="checkbox">
+                                    <label for="idMaterialui"> <img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idBulma" class="form-check-input" type="checkbox">
+                                    <label for="idBulma"> <img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/bulma-cyan?style=for-the-badge&logo=bulma&logoColor=white"
+                                        height="30px" alt=""></label>
+                                    <input hidden id="idSvelte" class="form-check-input" type="checkbox">
+                                    <label for="idSvelte"> <img
+                                        class="mb-1"
+                                        src="https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white"
+                                        height="30px" alt=""></label>
+                        </div>
+                        <h3 class="mb-3">Backend Development</h3>
+                        <div class="mb-4">
+                            <input hidden id="idNodejs" class="form-check-input" type="checkbox">
+                            <label for="idNodejs"> <img class="mb-1"
+                                    src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"
+                                    height="30px" alt=""></label>
+                            <input hidden id="idExpress" class="form-check-input" type="checkbox">
+                            <label for="idExpress"> <img class="mb-1"
+                                    src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
+                                    height="30px" alt=""></label>
+                            <input hidden id="idNginx" class="form-check-input" type="checkbox">
+                            <label for="idNginx"> <img class="mb-1"
+                                    src="https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white"
+                                    height="30px" alt=""></label>
+                            <input hidden id="idDjango" class="form-check-input" type="checkbox">
+                            <label for="idDjango"> <img class="mb-1"
+                                    src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"
+                                    height="30px" alt=""></label>
+                            <input hidden id="idFlask" class="form-check-input" type="checkbox">
+                            <label for="idFlask"> <img class="mb-1"
+                                    src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"
+                                    height="30px" alt=""></label>
+                        </div>
+                        <h3 class="mb-3">Other</h3>
+                        <input hidden id="idUnity" class="form-check-input" type="checkbox">
+                        <label for="idUnity"><img class="mb-1"
+                                src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white"
+                                height="30px" alt=""></label>
+                        <input hidden id="idUnreal" class="form-check-input" type="checkbox">
+                        <label for="idUnreal"><img class="mb-1"
+                                src="https://img.shields.io/badge/unreal-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white"
+                                height="30px" alt=""></label>
+                        <input hidden id="idGit" class="form-check-input" type="checkbox">
+                        <label for="idGit"><img class="mb-1"
+                                src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"
+                                height="30px" alt=""></label>
+                        <input hidden id="idArduino" class="form-check-input" type="checkbox">
+                        <label for="idArduino"><img class="mb-1"
+                                src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"
+                                height="30px" alt=""></label>
+                        <input hidden id="idLinux" class="form-check-input" type="checkbox">
+                        <label for="idLinux"><img class="mb-1"
+                                src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+                                height="30px" alt=""></label>
+                    </div>
+                    <div id="social" class="tab-pane fade">
+                        <form class="form1">
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">LinkedIn</label>
+                                    <input type="text" class="form-control" id="idLinkedin"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Twitter</label>
+                                    <input type="text" class="form-control" id="idTwitter"
+                                        placeholder="Enter your username">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Discord</label>
+                                    <input type="text" class="form-control" id="idDiscord"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Stackoverflow</label>
+                                    <input type="text" class="form-control" id="idStackoverflow"
+                                        placeholder="Enter your username">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Facebook</label>
+                                    <input type="text" class="form-control" id="idFacebook"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Instagram</label>
+                                    <input type="text" class="form-control" id="idInstagram"
+                                        placeholder="Enter your username">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Youtube</label>
+                                    <input type="text" class="form-control" id="idYoutube"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Reddit</label>
+                                    <input type="text" class="form-control" id="idReddit"
+                                        placeholder="Enter your username">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Kaggle</label>
+                                    <input type="text" class="form-control" id="idKaggle"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Medium</label>
+                                    <input type="text" class="form-control" id="idMedium"
+                                        placeholder="Enter your username">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Dribble</label>
+                                    <input type="text" class="form-control" id="idDribble"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Behnace</label>
+                                    <input type="text" class="form-control" id="idBehance"
+                                        placeholder="Enter your username">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Codepen</label>
+                                    <input type="text" class="form-control" id="idCodepen"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Geeks For Geeks</label>
+                                    <input type="text" class="form-control" id="idGFG"
+                                        placeholder="Enter your username">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Hackerrank</label>
+                                    <input type="text" class="form-control" id="idHackerrank"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Leetcode</label>
+                                    <input type="text" class="form-control" id="idLeetcode"
+                                        placeholder="Enter your username">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Codechef</label>
+                                    <input type="text" class="form-control" id="idCodechef"
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="mb-3 socialBoxes">
+                                    <label class="form-label">Codeforces</label>
+                                    <input type="text" class="form-control" id="idCodeforces"
+                                        placeholder="Enter your username">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="github" class="tab-pane fade">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Github Username</label>
+                                <input type="text" class="form-control" id="userName" placeholder="Enter your username"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">GitHub username required</div>
+                            </div>
+                        </form>
+                        <h3>Badges</h3>
+                        <div class="form2 d-flex justify-content-between mb-3">
+                            <div class="left">
+                                <div>
+                                    <input class="form-check-input mb-2" type="checkbox" value="" id="idArcCon"> Arctic
+                                    Contributor
+                                </div>
+                                <div>
+                                    <input class="form-check-input mb-2" type="checkbox" value="" id="idStar"> Stars
+                                    Program
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" value="" id="idPro"> Github Pro
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div>
+                                    <input class="form-check-input mb-2" type="checkbox" value="" id="idDev"> Developer
+                                    Program
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" value="" id="idSponsor"> Sponsor
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Statistics</h3>
+                        <div class="form2 d-flex justify-content-between mb-3">
+                            <div class="left">
+                                <div>
+                                    <input class="form-check-input mb-2" type="checkbox" value="" id="idProView"> Show
+                                    Profile Views
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" value="" id="idAtivity"> Show GitHub
+                                    Activity
+                                    Graph
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div>
+                                    <input class="form-check-input mb-2" type="checkbox" value="" id="idStatustics">
+                                    Show
+                                    GitHub
+                                    statistics
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" value="" id="idMostUsedLang"> Show
+                                    Most
+                                    Used
+                                    Languages
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Others</h3>
+                        <div class="form2 d-flex justify-content-between mb-3">
+                            <div class="left">
+                                <div>
+                                    <input class="form-check-input mb-2" type="checkbox" value="" id="idTrophies"> Show
+                                    Trophies
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" value="" id="idMetrics"> Show GitHub
+                                    Metrics
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" value="" id="idSteak"> Show GitHub
+                                    Streak Stats
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-2 priviewBox">
+                <h2>Preview</h2>
+                <hr>
+                <h3>Hi there 👋, My name is <span id="myName"></span></h3>
+                <div>
+                    <img width="100%" id="myImg" src="" alt="">
+                </div>
+
+                <p class="text-wrap" id="myAbout"></p>
+                <div class="mb-3">
+                    <h3 id="headingList">💫 Little Bit More About Me</h3>
+                    <p class="my-1">🔭 I'm currently working on <b id="list1"></b></p>
+                    <p class="my-1">👯 I want to collaborate on <b id="list2"></b></p>
+                    <p class="my-1">🙏 I'm looking for help with <b id="list3"></b></p>
+                    <p class="my-1">🌱 I'm currently learning <b id="list4"></b></p>
+                    <p class="my-1">💬 Ask me about <b id="list5"></b></p>
+                    <p class="my-1">📫 How to reach me? <b id="list6"></b></p>
+                    <p class="my-1">🤖 All of my projects are available at <b id="list7"></b></p>
+                    <p class="my-1">📰 I regularly write articles on <b id="list8"></b></p>
+                    <p class="my-1">😄 Know about my experiences <a id="list9" href="">here</a></p>
+                    <p class="my-1">⚡ Fun Fact: <b id="list10"></b></p>
+                </div>
+
+                <div class="skillsImg mb-3">
+                    <h3 id="headingSkills">💻 My Skills</h3>
+                    <img id="java" class="mt-1"
+                        src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="c" class="mt-1"
+                        src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="cpp" class="mt-1"
+                        src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="csharp" class="mt-1"
+                        src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="python" class="mt-1"
+                        src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
+                        height="30px"  alt="">
+                    <img id="js" class="mt-1"
+                        src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
+                        height="30px"  alt="">
+                    <img id="ts" class="mt-1"
+                        src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="swift" class="mt-1"
+                        src="https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="go" class="mt-1"
+                        src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="php" class="mt-1"
+                        src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="android" class="mt-1"
+                        src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="flutter" class="mt-1"
+                        src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="kotlin" class="mt-1"
+                        src="https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white"
+                        height="30px"  alt="">
+
+                    <img id="reactnative" class="mt-1"
+                        src="https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+                        height="30px"  alt="">
+                    <img id="dart" class="mt-1"
+                        src="https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="html" class="mt-1"
+                        src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="css" class="mt-1"
+                        src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="bootstrap" class="mt-1"
+                        src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="react" class="mt-1"
+                        src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+                        height="30px"  alt="">
+                    <img id="tailwind" class="mt-1"
+                        src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="vuejs" class="mt-1"
+                        src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D"
+                        height="30px"  alt="">
+                    <img id="angular" class="mt-1"
+                        src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="materialui" class="mt-1"
+                        src="https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="bulma" class="mt-1"
+                        src="https://img.shields.io/badge/bulma-cyan?style=for-the-badge&logo=bulma&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="svelte" class="mt-1"
+                        src="https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white"
+                        height="30px"  alt="">
+
+                    <img id="nodejs" class="mt-1"
+                        src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="express" class="mt-1"
+                        src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
+                        height="30px"  alt="">
+                    <img id="nginx" class="mt-1"
+                        src="https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="django" class="mt-1"
+                        src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="flask" class="mt-1"
+                        src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="unity" class="mt-1"
+                        src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="unreal" class="mt-1"
+                        src="https://img.shields.io/badge/unreal-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="git" class="mt-1"
+                        src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="arduino" class="mt-1"
+                        src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"
+                        height="30px"  alt="">
+                    <img id="linux" class="mt-1"
+                        src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+                        height="30px"  alt="">
+                </div>
+
+                <div class="mb-3">
+                    <h3 id="headingSocials">👥 Connect With Me</h3>
+                    <a href="" id="myLinkedin" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myTwitter" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myDiscord" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myStackoverflow" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myFacebook" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myInstgram" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myYoutube" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myReddit" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myKaggle" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myMedium" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myDribble" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Dribbble-EA4C89?style=for-the-badge&logo=dribbble&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myBehance" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Behance-1769ff?style=for-the-badge&logo=behance&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myCodepen" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myGFG" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/GeeksforGeeks-darkgreen?style=for-the-badge&logo=geeksforgeeks&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myHackerrank" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myLeetcode" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myCodechef" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/CodeChef-%23964B00.svg?style=for-the-badge&logo=CodeChef&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                    <a href="" id="myCodeforces" class="text-decoration-none" target="_blank">
+                        <img src="https://img.shields.io/badge/Codeforces-445f9d?style=for-the-badge&logo=Codeforces&logoColor=white"
+                            alt="" class="mt-1" height="30px">
+                    </a>
+                </div>
+
+                <div>
+                    <h3 id="headingBadges">🌟 GitHub Badges</h3>
+                    <div class="mb-3">
+                        <img id="arcContribute"
+                            src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif"
+                            width="40" height="40">
+                        <img id="devBadge"
+                            src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif"
+                            width="40" height="40">
+                        <img id="starBadge"
+                            src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/starbadge.gif"
+                            width="35" height="35">
+                        <img id="proBadge"
+                            src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif"
+                            width="35" height="35">
+                        <img id="sponsorBadge"
+                            src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif"
+                            width="35" height="35">
+                    </div>
+                    <h3 id="headingTrophy">🏆 GitHub Trophies</h3>
+                    <div class="mb-3">
+                            <a href="https://github.com/ryo-ma/github-profile-trophy"><img id="trophies"
+                            src="https://github-profile-trophy.vercel.app/?username=" alt="trophy"
+                            width="550px"></a>
+                    </div>
+                    <h3 id="headingStatus">📊 GitHub Status</h3>
+                    <div class="mb-3"><a href="https://github.com/anuraghazra/github-readme-stats"><img id="mostUsedLang"
+                                src="https://github-readme-stats.vercel.app/api/top-langs/?username="
+                                alt="Top Langs"></a>
+                    </div>
+                    <div class="mb-3"><img id="statistics" src="https://github-readme-stats.vercel.app/api?username="
+                            alt="GitHub stats">
+                    </div>
+                    <div class="mb-3"><img id="activityGraph" src="https://activity-graph.herokuapp.com/graph?username="
+                            alt="GitHub Activity Graph" width="550px"></div>
+                    <div class="mb-3"><img id="matrcis" src="https://metrics.lecoq.io/" alt="GitHub metrics"></div>
+                    <div class="mb-3"><img id="streakStatus"
+                            src="https://github-readme-streak-stats.herokuapp.com/?user=" alt="GitHub streak stats">
+                    </div>
+                    <div class="mb-3"><img id="profileView" src="https://visitcount.itsvg.in/api?id=" alt="Profile views"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary my-5 ce" id="generatReadmeFile">Generat ReadMe File</button>
+        </div>
+
+        <div class="codeBox container d-flex justify-content-between" id="last">
+            <div class="genretedCode">
+                <div class="d-flex justify-content-between mb-2">
+                    <h3>Code</h3>
+                    <button type="button" class="btn btn-primary" id="copyReadmeFile">Copy</button>
+                </div>
+                <textarea name="" id="codeArea" class="form-control" rows="20"></textarea>
+            </div>
+            <div class="ms-4 codeSecondBox">
+                <h4>Support Me With Crypto Coffee</h4>
+                <script type="text/javascript" src="https://buymeacryptocoffee.xyz/buttonwidget.js"
+                    data-address="0x0b0af035a1d07b66e9da02ade6545ca5b57dc744" data-name="crypto-coffee-button"></script>
+            </div>
+        </div>
+
+        <footer class="bg-black mt-3 py-2">
+            <p class="text-center text-white my-0">MADE WITH ❤ BY <a href="https://github.com/iamsatyajit05"
+                    class="text-warning text-decoration-none"><i class="hover-bold">IAMSATYAJIT05</i></a></p>
+        </footer>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
