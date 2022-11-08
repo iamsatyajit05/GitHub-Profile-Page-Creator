@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> <img src="favicon.png" width="80px"><br/>Github Profile Page Creator</h1>
+  <h1> <img src="Assets/favicon.png" width="80px"><br/>Github Profile Page Creator</h1>
 </div>
 <p align="center">
   <a href="https://linkedin.com/in/iamsatyajit" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" height="30px"></a>
